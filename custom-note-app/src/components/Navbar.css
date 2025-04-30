@@ -68,14 +68,44 @@
 
 .add-note {
   padding: 20px;
+}.add-note textarea {
+  width: 100%; /* Ensure the textarea fills the container */
+  padding: 12px; /* Add some padding for better text visibility */
+  margin-bottom: 15px; /* Space below the textarea */
+  border: 1px solid #ccc; /* Light border for better visibility */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Comfortable font size */
+  resize: vertical; /* Allow vertical resizing */
+  min-height: 150px; /* Minimum height for better visibility */
+  color: #333; /* Dark text for readability */
+  background-color: #f9f9f9; /* Light background for the textarea */
+  transition: border-color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
 }
 
-.add-note textarea {
-  width: 100%;
-  height: 100px;
-  padding: 10px;
-  margin-bottom: 10px;
+/* Focus effect for textarea */
+.add-note textarea:focus {
+  border-color: #1d4ed8; /* Blue border on focus */
+  background-color: #fff; /* Lighter background when focused */
+  outline: none; /* Remove default outline */
 }
+
+/* Mobile responsiveness for textarea */
+@media (max-width: 768px) {
+  .add-note textarea {
+    font-size: 14px; /* Adjust font size for smaller screens */
+    min-height: 120px; /* Reduce minimum height for small screens */
+    padding: 10px; /* Slightly reduce padding for mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .add-note textarea {
+    font-size: 14px; /* Consistent smaller font size on very small devices */
+    padding: 8px; /* Further reduce padding for very small screens */
+    min-height: 100px; /* Further reduce the height on very small devices */
+  }
+}
+
 
 .add-note button {
   padding: 10px 20px;
