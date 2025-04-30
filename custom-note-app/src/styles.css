@@ -1,0 +1,94 @@
+/* src/styles.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* Navbar styles */
+  nav {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  nav button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  nav button:hover {
+    background-color: #2563eb;
+  }
+  
+  nav button.active {
+    background-color: #1e40af;
+  }
+  
+  /* AddNote styles */
+  .add-note-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-note-container textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    min-height: 150px;
+  }
+  
+  .add-note-container button {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .add-note-container button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* NotesList styles */
+  .notes-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .note-item {
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #1d4ed8;
+  }
+  
+  .note-item p {
+    margin: 0;
+    font-size: 16px;
+  }
+  

@@ -1,0 +1,20 @@
+/* Tailwind's default base styles */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Global Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #5596c2; /* Light gray background */
+}
+
+h2, h3 {
+  color: #333; /* Darker text color for headings */
+}
+
+button {
+  transition: background-color 0.3s ease;
+}
+
+/* Custom styles can be added below */
