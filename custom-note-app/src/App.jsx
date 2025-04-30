@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 
+
 const App = () => {
   const [currentView, setCurrentView] = useState('add');
   const [notes, setNotes] = useState([]);

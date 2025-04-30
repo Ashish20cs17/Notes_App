@@ -1,136 +1,140 @@
 /* App.css */
 
-/* Base Styles */
+/* General Styles */
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f3f4f6;
+  padding: 0;
+  background-color: #f4f7f6;
 }
 
-/* Container for overall layout */
-.container {
-  max-width: 960px;
+.App {
+  max-width: 800px;
   margin: 0 auto;
-  padding: 1.5rem;
-  box-sizing: border-box;
+  padding: 20px;
 }
 
-/* Navbar Styling */
-.navbar {
-  background-color: #1f2937;
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.navbar button {
-  background-color: #4b5563;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  margin-left: 0.5rem;
-  border-radius: 0.25rem;
-  cursor: pointer;
-}
-
-.navbar button.active {
-  background-color: #2563eb;
-}
-
-/* Input Fields */
-input,
-textarea {
-  width: 100%;
-  padding: 0.5rem;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  box-sizing: border-box;
-}
-
-/* Submit Button */
-button.submit-btn {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.375rem;
-  cursor: pointer;
-}
-
-/* Note Card Container */
-.note-container {
-  background-color: #ffffff;
-  padding: 24px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 20px auto;
-  box-sizing: border-box;
-  width: 100%;
-}
-
-/* Note Title */
-.note-title {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 16px;
+h1 {
+  font-size: 2rem;
   color: #333;
   text-align: center;
 }
 
-/* Textarea for Notes */
-.note-textarea {
+textarea {
   width: 100%;
-  padding: 16px;
+  padding: 10px;
+  border-radius: 5px;
   border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 16px;
   resize: vertical;
-  outline: none;
-  transition: border-color 0.3s;
-  box-sizing: border-box;
+  min-height: 120px;
+  font-size: 1rem;
 }
 
-.note-textarea:focus {
-  border-color: #007bff;
-}
-
-/* Add Note Button */
-.note-button {
-  width: 100%;
-  margin-top: 16px;
-  padding: 12px;
-  background-color: #007bff;
+button {
+  background-color: #1d4ed8;
   color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
   border: none;
-  border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1rem;
+  margin-top: 10px;
 }
 
-.note-button:hover {
-  background-color: #1fb94d;
+button:hover {
+  background-color: #bb9b57;
 }
 
+.delete-btn {
+  background-color: #e11d48;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
 
-/* Responsive Enhancements */
-@media (max-width: 480px) {
-  .note-title {
-    font-size: 20px;
+.delete-btn:hover {
+  background-color: #f43f5e;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .App {
+    padding: 15px;
   }
 
-  .note-textarea {
-    font-size: 14px;
-    padding: 12px;
+  h1 {
+    font-size: 1.5rem;
   }
 
-  .note-button {
-    font-size: 14px;
-    padding: 10px;
+  textarea {
+    font-size: 0.9rem;
   }
+
+  button, .delete-btn {
+    font-size: 0.9rem;
+  }
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #6684da;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.navbar .navbar-title {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.navbar-buttons {
+  margin-top: 10px;
+}
+
+.navbar-btn {
+  background-color: #eb5325;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.navbar-btn:hover {
+  background-color: #178a30;
+}
+
+.navbar-btn.active {
+  background-color: #9f30ca;
+  font-weight: bold;
+}
+
+/* Add Note and View Notes section */
+.add-note, .view-notes {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.view-notes ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.view-notes li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.view-notes li span {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
 }
